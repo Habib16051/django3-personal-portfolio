@@ -25,7 +25,7 @@ SECRET_KEY = 've)!0h9i_g3vkao(c671_s=sq)k-&mwc#x7@fi-hc06_a%60ci'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['habibict.pythonanywhere.com']
 
 
 # Application definition
@@ -121,6 +121,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT= os.path.join(BASE_DIR, 'static')
+
+
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+
+try:
+    from .local_settings import *
+
+except ImportError:
+    print("looks like no local file. you must be on production")
+
+
