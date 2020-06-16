@@ -4,7 +4,7 @@ astroid==2.4.1
 certifi==2020.4.5.2
 colorama==0.4.3
 distlib==0.3.0
-django==3.0.6
+django==3.0.7
 filelock==3.0.12
 isort==4.3.21
 lazy-object-proxy==1.4.3
